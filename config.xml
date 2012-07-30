@@ -3,14 +3,14 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.visionest.ios.helloworldpg"
         version   = "2.0.0">
-    <name>Hello Cordova</name>
+    <name>HelloWorldPG</name>
 
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Applicazione di esempio Hello World usando PhoneGap/Apache Cordova.
     </description>
 
-    <author href="http://cordova.io" email="callback-dev@incubator.apache.org">
-        Apache Cordova Team
+    <author href="http://www.visionest.com" email="tobia.zorzan@visionest.com">
+        Tobia Zorzan - Visionest Srl
     </author>
 
     <icon src="res/icon/cordova_512.png"        width="512" height="512" />
