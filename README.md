@@ -1,4 +1,0 @@
-HelloWorldPG
-============
-
-HelloWorld using PhoneGap
