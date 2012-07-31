@@ -33,8 +33,6 @@
             console.log("CORDOVA IS WORKING:::");
             }
 
-            var options = { quality: 50};
-
             function onSuccess(imageData) {
                 var image = document.getElementById('myImage');
                 image.src = imageData;
@@ -45,9 +43,13 @@
             }
         </script>    
 
-        <a data-role="button" data-theme="b" onClick="navigator.camera.getPicture(onSuccess, onFail, options);"
+        <a data-role="button" data-theme="b" onClick="navigator.camera.getPicture(onSuccess, onFail, {});"
         data-icon="refresh" data-iconpos="right">
-            Change Picture
+            Take Picture
+        </a>
+        <a data-role="button" data-theme="b" onClick="navigator.camera.getPicture(onSuccess, onFail, {sourceType: Camera.PictureSource.SAVEDPHOTOALBUM});"
+        data-icon="refresh" data-iconpos="right">
+            Choose Image
         </a>
     </div>
 </div>
