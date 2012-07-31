@@ -3,31 +3,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<script type="text/javascript" src="cordova-2.0.0.js"></script>
-        <script type="text/javascript">
-		   console.log("hello!");
-			navigator.camera.getPicture(onSuccess, onFail, { quality: 100,
-				destinationType: Camera.DestinationType.DATA_URL
-			}); 
-
-			function onSuccess(imageData) {
-				console.log('success !!!');
-				var image = document.getElementById('myImage');
-				image.src = "data:image/jpeg;base64," + imageData;
-			}
-
-			function onFail(message) {
-				alert('Failed because: ' + message);
-			}
-		</script>
-        <title>Hello World Visionest</title>
     </head>
     <body>
-            <h1>Hello World</h1>
-  
-
+        <h1>Hello World Visionest</h1>
+        <img id="myImage" src="res/screen/iphone_portrait.png"/>
         <script type="text/javascript">
-            app.initialize();
+            var popover = new CameraPopoverOptions(300,300,100,100,Camera.PopoverArrowDirection.ARROW_ANY);
+            var options = { quality: 50, destinationType: Camera.DestinationType.DATA_URL,sourceType: Camera.PictureSource.SAVEDPHOTOALBUM, popoverOptions : popover };
 
-        </script>
+            navigator.camera.getPicture(onSuccess, onFail, options);
+
+            function onSuccess(imageData) {
+                var image = document.getElementById('myImage');
+                image.src = "data:image/jpeg;base64," + imageData;
+            }
+
+            function onFail(message) {
+                alert('Failed because: ' + message);
+            }
+        </script>            
     </body>
 </html>

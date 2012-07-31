@@ -24,6 +24,7 @@
     <gap:splash src="res/screen/iphone_retina_landscape.png"     width="960"  height="640"  gap:platform="ios" />
     <gap:splash src="res/screen/iphone_retina_portrait.png"      width="640"  height="960"  gap:platform="ios" />
 
+    <feature name="http://api.phonegap.com/1.0/device"/>
 	<feature name="http://api.phonegap.com/1.0/camera"/>
 
     <preference name="phonegap-version" value="1.9.0" />
