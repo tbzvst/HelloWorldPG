@@ -43,11 +43,16 @@
             }
         </script>    
 
-        <a data-role="button" data-theme="b" onClick="navigator.camera.getPicture(onSuccess, onFail, {});"
+        <form>
+        <label for="slider-0">Quality:</label>
+        <input type="range" name="slider" id="slider-0" value="50" min="0" max="100" data-highlight="true"/>
+        </form>
+
+        <a data-role="button" data-theme="b" onClick="navigator.camera.getPicture(onSuccess, onFail, {quality: $('#slider-0').val()});"
         data-icon="refresh" data-iconpos="right">
             Take Picture
         </a>
-        <a data-role="button" data-theme="b" onClick="navigator.camera.getPicture(onSuccess, onFail, {sourceType:Camera.PictureSourceType.PHOTOLIBRARY});"
+        <a data-role="button" data-theme="b" onClick="navigator.camera.getPicture(onSuccess, onFail, {quality: $('#slider-0').val(), sourceType:Camera.PictureSourceType.PHOTOLIBRARY});"
         data-icon="refresh" data-iconpos="right">
             Choose Image
         </a>
